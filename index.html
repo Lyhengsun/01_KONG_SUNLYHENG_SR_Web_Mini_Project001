@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @layer components {
@@ -75,31 +82,31 @@
 
     <section class="flex bg-[#F2F0F1] px-20">
       <article class="basis-full flex-col py-20">
-        <h2 class="mb-5 text-7xl font-extrabold uppercase">
+        <h1 class="mb-5 text-7xl font-extrabold uppercase">
           find clothes that matches your style
-        </h2>
+        </h1>
         <p class="w-[90%] font-thin">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque odit
-          veritatis pariatur corrupti magnam! Tempora reiciendis, dignissimos
-          quia quasi voluptate doloremque iste voluptatem voluptates blanditiis
+          Browse through our diverse range of meticulously crafted garments,
+          designed to bring out your individuality and cater to your sense of
+          style.
         </p>
         <button class="my-8 rounded-full bg-black px-16 py-3 text-white">
           Shop now
         </button>
-          <!-- <ul class="flex justify-center">
-            <li class="border-r-2 border-r-slate-300 pr-10">
-              <p class="shop-stats-number">200+</p>
-              <p class="shop-stats-title">International Brands</p>
-            </li>
-            <li class="border-r-2 border-r-slate-300 px-10">
-              <p class="shop-stats-number">2,000+</p>
-              <p class="shop-stats-title">High-Quality Products</p>
-            </li>
-            <li class="pl-10">
-              <p class="shop-stats-number">30,000+</p>
-              <p class="shop-stats-title">Happy Customers</p>
-            </li>
-          </ul> -->
+        <ul class="flex justify-center">
+          <li class="border-r-2 border-r-slate-300 pr-10">
+            <p class="shop-stats-number">200+</p>
+            <p class="shop-stats-title">International Brands</p>
+          </li>
+          <li class="border-r-2 border-r-slate-300 px-10">
+            <p class="shop-stats-number">2,000+</p>
+            <p class="shop-stats-title">High-Quality Products</p>
+          </li>
+          <li class="pl-10">
+            <p class="shop-stats-number">30,000+</p>
+            <p class="shop-stats-title">Happy Customers</p>
+          </li>
+        </ul>
       </article>
       <figure
         class="relative basis-full bg-[url(./assets/images/trendy-couple-posing.jpg)] bg-cover bg-[center_10%]"
@@ -116,12 +123,404 @@
         />
       </figure>
     </section>
-    <section class="flex justify-between bg-black px-20">
-      <figure>
-        <img src="" alt="" /><img src="" alt="" /><img src="" alt="" /><img
-          src=""
-          alt=""
-        /><img src="" alt="" />
+    <section class="bg-black px-20 py-8">
+      <figure class="flex justify-between">
+        <img src="assets/logo/versace-logo.svg" alt="versace-logo.svg" /><img
+          src="assets/logo/zara-logo.svg"
+          alt="zara-logo.svg"
+        /><img src="assets/logo/gucci-logo.svg" alt="gucci-logo.svg" /><img
+          src="assets/logo/prada-logo.svg"
+          alt="prada-logo.svg"
+        /><img
+          src="assets/logo/calvin-klein-logo.svg"
+          alt="calvin-klein-logo.svg"
+        />
+      </figure>
+    </section>
+
+    <section class="mb-10 mt-16">
+      <h2 class="mb-16 text-center text-5xl font-extrabold uppercase">
+        new arrivals
+      </h2>
+      <figure class="mb-4 flex justify-between px-20">
+        <div class="rounded-lg">
+          <div
+            class="flex aspect-square w-[20vw] items-center justify-center overflow-hidden rounded-2xl bg-[#F0EEED] px-6"
+          >
+            <a href="#">
+              <img
+                class="object-cover object-center"
+                src="/assets/images/products/tshirt-with-tape-details.png"
+                alt="tshirt-with-tape-details.png"
+              />
+            </a>
+          </div>
+          <div class="py-4">
+            <a href="#">
+              <h5
+                class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+              >
+                T-shirt with Tape Details
+              </h5>
+            </a>
+            <div class="mb-2.5 mt-2 flex items-center">
+              <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i>
+                <i class="fa-solid fa-star-half text-yellow-300"></i>
+              </div>
+              <p class="ml-2 text-sm font-thin">
+                4.5<span class="text-slate-400">/5</span>
+              </p>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-2xl font-semibold text-gray-900 dark:text-white"
+                >$120</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg">
+          <div
+            class="flex aspect-square w-[20vw] items-center justify-center overflow-hidden rounded-2xl bg-[#F0EEED] px-6"
+          >
+            <a href="#">
+              <img
+                class="object-cover object-center"
+                src="/assets/images/products/skinny-fit-jeans.png"
+                alt="skinny-fit-jeans.png"
+              />
+            </a>
+          </div>
+          <div class="py-4">
+            <a href="#">
+              <h5
+                class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+              >
+                Skinny Fit Jeans
+              </h5>
+            </a>
+            <div class="mb-2.5 mt-2 flex items-center">
+              <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i>
+                <i class="fa-solid fa-star-half text-yellow-300"></i>
+              </div>
+              <p class="ml-2 text-sm font-thin">
+                3.5<span class="text-slate-400">/5</span>
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-2.5">
+              <span class="text-2xl font-semibold text-gray-900 dark:text-white"
+                >$240</span
+              >
+              <span
+                class="text-2xl font-semibold text-gray-400 line-through dark:text-white"
+                >$260</span
+              >
+              <span
+                class="rounded-full bg-red-100 px-3 py-1.5 text-xs font-light text-red-800 dark:bg-red-200 dark:text-blue-800"
+                >20%</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg">
+          <div
+            class="flex aspect-square w-[20vw] items-center justify-center overflow-hidden rounded-2xl bg-[#F0EEED] px-6"
+          >
+            <a href="#">
+              <img
+                class="object-cover object-center"
+                src="/assets/images/products/checkered-shirt.png"
+                alt="checkered-shirt.png"
+              />
+            </a>
+          </div>
+          <div class="py-4">
+            <a href="#">
+              <h5
+                class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+              >
+                Checkered Shirt
+              </h5>
+            </a>
+            <div class="mb-2.5 mt-2 flex items-center">
+              <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i>
+                <i class="fa-solid fa-star-half text-yellow-300"></i>
+              </div>
+              <p class="ml-2 text-sm font-thin">
+                4.5<span class="text-slate-400">/5</span>
+              </p>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-2xl font-semibold text-gray-900 dark:text-white"
+                >$180</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg">
+          <div
+            class="flex aspect-square w-[20vw] items-center justify-center overflow-hidden rounded-2xl bg-[#F0EEED] px-6"
+          >
+            <a href="#">
+              <img
+                class="object-cover object-center"
+                src="/assets/images/products/sleeve-striped-shirt.png"
+                alt="sleeve-striped-shirt.png"
+              />
+            </a>
+          </div>
+          <div class="py-4">
+            <a href="#">
+              <h5
+                class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+              >
+                T-shirt with Tape Details
+              </h5>
+            </a>
+            <div class="mb-2.5 mt-2 flex items-center">
+              <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i>
+                <i class="fa-solid fa-star-half text-yellow-300"></i>
+              </div>
+              <p class="ml-2 text-sm font-thin">
+                4.5<span class="text-slate-400">/5</span>
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-2.5">
+              <span class="text-2xl font-semibold text-gray-900 dark:text-white"
+                >$130</span
+              >
+              <span
+                class="text-2xl font-semibold text-gray-400 line-through dark:text-white"
+                >$160</span
+              >
+              <span
+                class="rounded-full bg-red-100 px-3 py-1.5 text-xs font-light text-red-800 dark:bg-red-200 dark:text-blue-800"
+                >30%</span
+              >
+            </div>
+          </div>
+        </div>
+      </figure>
+      <article class="flex justify-center">
+        <button
+          type="button"
+          class="mb-2 me-2 rounded-full border border-gray-400 bg-white px-16 py-3 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+        >
+          View All
+        </button>
+      </article>
+    </section>
+    <hr class="mx-20 text-slate-300" />
+    <section class="mb-10 mt-16">
+      <h2 class="mb-16 text-center text-5xl font-extrabold uppercase">
+        top selling
+      </h2>
+      <figure class="mb-4 flex justify-between px-20">
+        <div class="rounded-lg">
+          <div
+            class="flex aspect-square w-[20vw] items-center justify-center overflow-hidden rounded-2xl bg-[#F0EEED] px-6"
+          >
+            <a href="#">
+              <img
+                class="object-cover object-center"
+                src="/assets/images/products/vertical-striped-shirt.png"
+                alt="vertical-striped-shirt.png"
+              />
+            </a>
+          </div>
+          <div class="py-4">
+            <a href="#">
+              <h5
+                class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+              >
+                Vertical Striped Shirt
+              </h5>
+            </a>
+            <div class="mb-2.5 mt-2 flex items-center">
+              <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i>
+                <i class="fa-solid fa-star text-yellow-300"></i>
+              </div>
+              <p class="ml-2 text-sm font-thin">
+                5.0<span class="text-slate-400">/5</span>
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-2.5">
+              <span class="text-2xl font-semibold text-gray-900 dark:text-white"
+                >$212</span
+              >
+              <span
+                class="text-2xl font-semibold text-gray-400 line-through dark:text-white"
+                >$232</span
+              >
+              <span
+                class="rounded-full bg-red-100 px-3 py-1.5 text-xs font-light text-red-800 dark:bg-red-200 dark:text-blue-800"
+                >20%</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg">
+          <div
+            class="flex aspect-square w-[20vw] items-center justify-center overflow-hidden rounded-2xl bg-[#F0EEED] px-6"
+          >
+            <a href="#">
+              <img
+                class="object-cover object-center"
+                src="/assets/images/products/courage-graphic-tshirt.png"
+                alt="skinny-fit-jeans.png"
+              />
+            </a>
+          </div>
+          <div class="py-4">
+            <a href="#">
+              <h5
+                class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+              >
+                Courage Graphic T-shirt
+              </h5>
+            </a>
+            <div class="mb-2.5 mt-2 flex items-center">
+              <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i>
+                <i class="fa-solid fa-star text-yellow-300"></i>
+              </div>
+              <p class="ml-2 text-sm font-thin">
+                4.0<span class="text-slate-400">/5</span>
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-2.5">
+              <span class="text-2xl font-semibold text-gray-900 dark:text-white"
+                >$145</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg">
+          <div
+            class="flex aspect-square w-[20vw] items-center justify-center overflow-hidden rounded-2xl bg-[#F0EEED] px-6"
+          >
+            <a href="#">
+              <img
+                class="object-cover object-center"
+                src="/assets/images/products/loose-fit-bermuda-shorts.png"
+                alt="checkered-shirt.png"
+              />
+            </a>
+          </div>
+          <div class="py-4">
+            <a href="#">
+              <h5
+                class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+              >
+                Loose Fit Bermuda Shorts
+              </h5>
+            </a>
+            <div class="mb-2.5 mt-2 flex items-center">
+              <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i>
+              </div>
+              <p class="ml-2 text-sm font-thin">
+                3.0<span class="text-slate-400">/5</span>
+              </p>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-2xl font-semibold text-gray-900 dark:text-white"
+                >$80</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg">
+          <div
+            class="flex aspect-square w-[20vw] items-center justify-center overflow-hidden rounded-2xl bg-[#F0EEED] px-6"
+          >
+            <a href="#">
+              <img
+                class="object-cover object-center"
+                src="/assets/images/products/faded-skinny-jeans.png"
+                alt="sleeve-striped-shirt.png"
+              />
+            </a>
+          </div>
+          <div class="py-4">
+            <a href="#">
+              <h5
+                class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+              >
+                Faded Skinny Jeans
+              </h5>
+            </a>
+            <div class="mb-2.5 mt-2 flex items-center">
+              <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i
+                ><i class="fa-solid fa-star text-yellow-300"></i>
+                <i class="fa-solid fa-star-half text-yellow-300"></i>
+              </div>
+              <p class="ml-2 text-sm font-thin">
+                4.5<span class="text-slate-400">/5</span>
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-2.5">
+              <span class="text-2xl font-semibold text-gray-900 dark:text-white"
+                >$210</span
+              >
+            </div>
+          </div>
+        </div>
+      </figure>
+      <article class="flex justify-center">
+        <button
+          type="button"
+          class="mb-2 me-2 rounded-full border border-gray-400 bg-white px-16 py-3 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+        >
+          View All
+        </button>
+      </article>
+    </section>
+
+    <section class="mx-20 flex flex-col gap-5 rounded-[2rem] bg-[#F0F0F0] p-20">
+      <h2 class="mb-14 text-center text-5xl font-extrabold uppercase">
+        Browse By Dress Style
+      </h2>
+      <figure class="flex gap-5">
+        <div class="h-80 basis-[38%] rounded-2xl bg-red-500 px-12 py-10">
+          <p class="text-4xl font-semibold">Casual</p>
+        </div>
+        <div class="h-80 basis-[62%] rounded-2xl bg-blue-500 px-12 py-10">
+          <p class="text-4xl font-semibold">Formal</p>
+        </div>
+      </figure>
+      <figure class="flex gap-5">
+        <div class="h-80 basis-[62%] rounded-2xl bg-blue-500 px-12 py-10">
+          <p class="text-4xl font-semibold">Party</p>
+        </div>
+        <div class="h-80 basis-[38%] rounded-2xl bg-red-500 px-12 py-10">
+          <p class="text-4xl font-semibold">Gym</p>
+        </div>
       </figure>
     </section>
   </body>
