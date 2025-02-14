@@ -4,15 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style>
+    <style type="text/tailwindcss">
       @layer components {
+        .shop-stats-number {
+          @apply mb-1 text-5xl font-semibold;
+        }
+        .shop-stats-title {
+          @apply font-thin;
+        }
       }
     </style>
     <title>Document</title>
   </head>
   <body>
     <header
-      class="flex justify-center gap-1 bg-black py-2.5 text-sm font-thin text-white"
+      class="flex justify-center gap-1 bg-black py-2.5 text-xs font-thin text-white md:text-sm"
     >
       <p>Sign up and get 20% off to your first order.</p>
       <a href="" class="border-b-[1px] border-b-white font-semibold"
@@ -20,13 +26,19 @@
       >
     </header>
 
-    <section class="flex items-center justify-between px-20 py-5">
+    <section
+      class="flex items-center justify-between px-5 py-5 md:px-10 lg:px-20"
+    >
       <article>
-        <h2 class="text-4xl font-extrabold">SHOP.CO</h2>
+        <h2 class="text-lg font-extrabold sm:text-4xl">SHOP.CO</h2>
       </article>
       <article>
-        <ul class="flex gap-4">
-          <li>Shop</li>
+        <ul
+          class="hidden gap-4 text-center lg:flex lg:items-center lg:justify-between lg:px-5"
+        >
+          <li class="flex items-center gap-1">
+            Shop <img src="assets/icons/dropdown-icon.svg" alt="" />
+          </li>
           <li>On Sale</li>
           <li>New Arrivals</li>
           <li>Brands</li>
@@ -52,6 +64,15 @@
       </figure>
     </section>
 
+    <ul class="flex justify-evenly gap-4 px-5 pb-3 lg:hidden">
+      <li class="flex items-center gap-1">
+        Shop <img src="assets/icons/dropdown-icon.svg" alt="" />
+      </li>
+      <li>On Sale</li>
+      <li>New Arrivals</li>
+      <li>Brands</li>
+    </ul>
+
     <section class="flex bg-[#F2F0F1] px-20">
       <article class="basis-full flex-col py-20">
         <h2 class="mb-5 text-7xl font-extrabold uppercase">
@@ -65,20 +86,20 @@
         <button class="my-8 rounded-full bg-black px-16 py-3 text-white">
           Shop now
         </button>
-        <ul class="flex justify-center">
-          <li class="border-r-2 border-r-slate-300 pr-10">
-            <p class="mb-1 text-5xl font-semibold">200+</p>
-            <p class="font-thin">International Brands</p>
-          </li>
-          <li class="border-r-2 border-r-slate-300 px-10">
-            <p class="mb-1 text-5xl font-semibold">2,000+</p>
-            <p class="font-thin">High-Quality Products</p>
-          </li>
-          <li class="pl-10">
-            <p class="mb-1 text-5xl font-semibold">30,000+</p>
-            <p class="font-thin">Happy Customers</p>
-          </li>
-        </ul>
+          <!-- <ul class="flex justify-center">
+            <li class="border-r-2 border-r-slate-300 pr-10">
+              <p class="shop-stats-number">200+</p>
+              <p class="shop-stats-title">International Brands</p>
+            </li>
+            <li class="border-r-2 border-r-slate-300 px-10">
+              <p class="shop-stats-number">2,000+</p>
+              <p class="shop-stats-title">High-Quality Products</p>
+            </li>
+            <li class="pl-10">
+              <p class="shop-stats-number">30,000+</p>
+              <p class="shop-stats-title">Happy Customers</p>
+            </li>
+          </ul> -->
       </article>
       <figure
         class="relative basis-full bg-[url(./assets/images/trendy-couple-posing.jpg)] bg-cover bg-[center_10%]"
