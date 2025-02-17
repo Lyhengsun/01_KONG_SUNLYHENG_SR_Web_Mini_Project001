@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+      /* Hide default range styling */
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        position: absolute;
+        background: transparent;
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      /* Custom track (hidden default) */
+      input[type="range"]::-webkit-slider-runnable-track {
+        height: 2px;
+      }
+
+      /* Custom thumb styling (Centered) */
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        background: white;
+        border: 3px solid #23a9f7;
+        border-radius: 50%;
+        cursor: pointer;
+        pointer-events: auto;
+        position: relative;
+        z-index: 3;
+        transform: translateY(-30%);
+      }
+
+      input[type="range"]::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        background: white;
+        border: 3px solid #23a9f7;
+        border-radius: 50%;
+        cursor: pointer;
+        pointer-events: auto;
+        z-index: 3;
+        transform: translateY(-30%);
+      }
+
+      /* Centering the range input itself */
+      .slider-container {
+        position: relative;
+        height: 18px; /* Adjust height to fit thumb */
+      }
+    </style>
+    <title>Category Page</title>
+  </head>
+  <body>
+    <header
+      class="gap-1 bg-black py-2.5 text-xs font-thin text-white md:text-sm"
+    >
+      <div
+        class="lg:mx-30 relative mx-5 flex items-center justify-center md:mx-10"
+      >
+        <p>
+          Sign up and get 20% off to your first order.
+          <a href="" class="border-b-[1px] border-b-white font-semibold"
+            >Sign Up Now</a
+          >
+        </p>
+        <i class="fa-solid fa-xmark absolute right-0 text-xl"></i>
+      </div>
+    </header>
+
+    <section class="lg:px-30 px-5 md:px-10">
+      <article class="flex items-center justify-between py-5">
+        <article>
+          <h2 class="text-lg font-extrabold sm:text-4xl">SHOP.CO</h2>
+        </article>
+        <article>
+          <ul
+            class="hidden gap-4 text-center lg:flex lg:items-center lg:justify-between lg:px-5"
+          >
+            <li class="flex items-center gap-1">
+              Shop <img src="assets/icons/dropdown-icon.svg" alt="" />
+            </li>
+            <li>On Sale</li>
+            <li>New Arrivals</li>
+            <li>Brands</li>
+          </ul>
+        </article>
+        <article
+          class="flex items-center gap-3 rounded-full bg-[#f0f0f0] px-4 py-2"
+        >
+          <label for="search-input"
+            ><img src="./assets/icons/search-icon.svg" alt=""
+          /></label>
+          <input
+            class="w-[35vw]"
+            type="text"
+            name=""
+            id="search-input"
+            placeholder="Search for products..."
+          />
+        </article>
+        <figure class="flex gap-4">
+          <img src="./assets/icons/shopping-cart-icon.svg" alt="" />
+          <img src="./assets/icons/profile-icon.svg" alt="" />
+        </figure>
+      </article>
+      <ul class="flex justify-evenly gap-4 px-5 pb-3 lg:hidden">
+        <li class="flex items-center gap-1">
+          Shop <img src="assets/icons/dropdown-icon.svg" alt="" />
+        </li>
+        <li>On Sale</li>
+        <li>New Arrivals</li>
+        <li>Brands</li>
+      </ul>
+      <hr class="border-gray-300 sm:mx-auto dark:border-gray-700" />
+      <article class="flex gap-4 pt-5">
+        <a href="" class="text-slate-500"
+          >Home <i class="fa-solid fa-angle-right"></i></a
+        ><a href="">Casual</a>
+      </article>
+    </section>
+
+    <section class="lg:px-30 mt-6 flex gap-8 px-5 md:px-10">
+      <article class="basis-1/4">
+        <article class="rounded-2xl border border-gray-300 px-6 py-4">
+          <article class="flex items-center justify-between">
+            <p class="text-2xl font-semibold">Filter</p>
+            <i class="fa-solid fa-sliders"></i>
+          </article>
+          <hr class="my-4 text-slate-200" />
+          <article class="mb-4 flex items-center justify-between">
+            <p class="text-lg font-medium text-slate-500">T-shirts</p>
+            <i class="fa-solid fa-chevron-right text-slate-500"></i>
+          </article>
+          <article class="mb-4 flex items-center justify-between">
+            <p class="text-lg font-medium text-slate-500">Shorts</p>
+            <i class="fa-solid fa-chevron-right text-slate-500"></i>
+          </article>
+          <article class="mb-4 flex items-center justify-between">
+            <p class="text-lg font-medium text-slate-500">Shirts</p>
+            <i class="fa-solid fa-chevron-right text-slate-500"></i>
+          </article>
+          <article class="mb-4 flex items-center justify-between">
+            <p class="text-lg font-medium text-slate-500">Hoodie</p>
+            <i class="fa-solid fa-chevron-right text-slate-500"></i>
+          </article>
+          <article class="mb-4 flex items-center justify-between">
+            <p class="text-lg font-medium text-slate-500">Jeans</p>
+            <i class="fa-solid fa-chevron-right text-slate-500"></i>
+          </article>
+
+          <hr class="mb-4 text-slate-200" />
+
+          <article class="mb-6 mt-2 flex items-center justify-between">
+            <p class="text-2xl font-semibold">Price</p>
+            <i class="fa-solid fa-chevron-up"></i>
+          </article>
+
+          <div class="slider-container relative mb-6 mt-4">
+            <!-- Custom Range Inputs -->
+            <input type="range" id="minRange" min="0" max="400" value="0" />
+            <input type="range" id="maxRange" min="0" max="400" value="400" />
+
+            <!-- Custom Track -->
+
+            <div class="relative h-2 w-full rounded-md bg-gray-200">
+              <div
+                id="rangeTrack"
+                class="absolute h-2 rounded-md bg-gradient-to-r from-blue-900 to-blue-400"
+              ></div>
+            </div>
+          </div>
+
+          <hr class="mb-4 text-slate-200" />
+
+          <article>
+            <div class="mb-5 mt-2 flex items-center justify-between">
+              <p class="text-2xl font-semibold">Colors</p>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="flex justify-between">
+              <div class="aspect-square w-10 rounded-full bg-red-500"></div>
+              <div class="aspect-square w-10 rounded-full bg-red-500"></div>
+              <div class="aspect-square w-10 rounded-full bg-red-500"></div>
+              <div class="aspect-square w-10 rounded-full bg-red-500"></div>
+              <div class="aspect-square w-10 rounded-full bg-red-500"></div>
+            </div>
+            <div class="mt-5 flex justify-between">
+              <div class="aspect-square w-10 rounded-full bg-red-500"></div>
+              <div class="aspect-square w-10 rounded-full bg-red-500"></div>
+              <div class="aspect-square w-10 rounded-full bg-red-500"></div>
+              <div class="aspect-square w-10 rounded-full bg-red-500"></div>
+              <div class="aspect-square w-10 rounded-full bg-red-500"></div>
+            </div>
+          </article>
+
+          <hr class="mb-4 mt-6 text-slate-200" />
+
+          <article>
+            <div class="mb-5 mt-2 flex items-center justify-between">
+              <p class="text-2xl font-semibold">Size</p>
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+              <button
+                class="rounded-full bg-[#F0F0F0] px-5 py-2 font-thin text-slate-500"
+              >
+                XX-Small
+              </button>
+              <button
+                class="rounded-full bg-[#F0F0F0] px-5 py-2 font-thin text-slate-500"
+              >
+                X-Small
+              </button>
+              <button
+                class="rounded-full bg-[#F0F0F0] px-5 py-2 font-thin text-slate-500"
+              >
+                Small
+              </button>
+              <button
+                class="rounded-full bg-[#F0F0F0] px-5 py-2 font-thin text-slate-500"
+              >
+                Medium
+              </button>
+              <button class="rounded-full bg-black px-5 py-2 text-white">
+                Large
+              </button>
+              <button
+                class="rounded-full bg-[#F0F0F0] px-5 py-2 font-thin text-slate-500"
+              >
+                X-Large
+              </button>
+              <button
+                class="rounded-full bg-[#F0F0F0] px-5 py-2 font-thin text-slate-500"
+              >
+                XX-Large
+              </button>
+              <button
+                class="rounded-full bg-[#F0F0F0] px-5 py-2 font-thin text-slate-500"
+              >
+                3X-Large
+              </button>
+              <button
+                class="rounded-full bg-[#F0F0F0] px-5 py-2 font-thin text-slate-500"
+              >
+                4X-Large
+              </button>
+            </div>
+          </article>
+
+          <hr class="my-6 text-slate-200" />
+
+          <article class="mb-6 flex items-center justify-between">
+            <p class="text-2xl font-semibold">Dress Style</p>
+            <i class="fa-solid fa-chevron-up"></i>
+          </article>
+          <article class="mb-4 flex items-center justify-between">
+            <p class="text-lg font-medium text-slate-500">Casual</p>
+            <i class="fa-solid fa-chevron-right text-slate-500"></i>
+          </article>
+          <article class="mb-4 flex items-center justify-between">
+            <p class="text-lg font-medium text-slate-500">Formal</p>
+            <i class="fa-solid fa-chevron-right text-slate-500"></i>
+          </article>
+          <article class="mb-4 flex items-center justify-between">
+            <p class="text-lg font-medium text-slate-500">Party</p>
+            <i class="fa-solid fa-chevron-right text-slate-500"></i>
+          </article>
+          <article class="mb-4 flex items-center justify-between">
+            <p class="text-lg font-medium text-slate-500">Gym</p>
+            <i class="fa-solid fa-chevron-right text-slate-500"></i>
+          </article>
+          <button
+            class="my-4 w-full rounded-full bg-black py-3 text-center text-white"
+          >
+            Apply Filter
+          </button>
+        </article>
+      </article>
+
+      <section class="basis-3/4">
+        <article class="flex w-full items-end justify-between">
+          <h2 class="text-3xl font-semibold">Casual</h2>
+          <div class="flex gap-4">
+            <p>Showing 1-10 of 100 Products</p>
+            <p>
+              Sort by: <span class="font-semibold">Most Popular</span>
+              <i class="fa-solid fa-chevron-down text-sm"></i>
+            </p>
+          </div>
+        </article>
+        <figure class="mt-6 grid grid-cols-3 gap-5">
+          <div class="rounded-lg">
+            <div
+              class="flex aspect-square w-[20vw] items-center justify-center overflow-hidden rounded-2xl bg-[#F0EEED] px-6"
+            >
+              <a href="#">
+                <img
+                  class="object-cover object-center"
+                  src="/assets/images/products/tshirt-with-tape-details.png"
+                  alt="tshirt-with-tape-details.png"
+                />
+              </a>
+            </div>
+            <div class="py-4">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  T-shirt with Tape Details
+                </h5>
+              </a>
+              <div class="mb-2.5 mt-2 flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star-half text-yellow-300"></i>
+                </div>
+                <p class="ml-2 text-sm font-thin">
+                  4.5<span class="text-slate-400">/5</span>
+                </p>
+              </div>
+              <div class="flex items-center justify-between">
+                <span
+                  class="text-2xl font-semibold text-gray-900 dark:text-white"
+                  >$120</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-lg">
+            <div
+              class="flex aspect-square w-[20vw] items-center justify-center overflow-hidden rounded-2xl bg-[#F0EEED] px-6"
+            >
+              <a href="#">
+                <img
+                  class="object-cover object-center"
+                  src="/assets/images/products/tshirt-with-tape-details.png"
+                  alt="tshirt-with-tape-details.png"
+                />
+              </a>
+            </div>
+            <div class="py-4">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  T-shirt with Tape Details
+                </h5>
+              </a>
+              <div class="mb-2.5 mt-2 flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star-half text-yellow-300"></i>
+                </div>
+                <p class="ml-2 text-sm font-thin">
+                  4.5<span class="text-slate-400">/5</span>
+                </p>
+              </div>
+              <div class="flex items-center justify-between">
+                <span
+                  class="text-2xl font-semibold text-gray-900 dark:text-white"
+                  >$120</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-lg">
+            <div
+              class="flex aspect-square w-[20vw] items-center justify-center overflow-hidden rounded-2xl bg-[#F0EEED] px-6"
+            >
+              <a href="#">
+                <img
+                  class="object-cover object-center"
+                  src="/assets/images/products/tshirt-with-tape-details.png"
+                  alt="tshirt-with-tape-details.png"
+                />
+              </a>
+            </div>
+            <div class="py-4">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  T-shirt with Tape Details
+                </h5>
+              </a>
+              <div class="mb-2.5 mt-2 flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star-half text-yellow-300"></i>
+                </div>
+                <p class="ml-2 text-sm font-thin">
+                  4.5<span class="text-slate-400">/5</span>
+                </p>
+              </div>
+              <div class="flex items-center justify-between">
+                <span
+                  class="text-2xl font-semibold text-gray-900 dark:text-white"
+                  >$120</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-lg">
+            <div
+              class="flex aspect-square w-[20vw] items-center justify-center overflow-hidden rounded-2xl bg-[#F0EEED] px-6"
+            >
+              <a href="#">
+                <img
+                  class="object-cover object-center"
+                  src="/assets/images/products/tshirt-with-tape-details.png"
+                  alt="tshirt-with-tape-details.png"
+                />
+              </a>
+            </div>
+            <div class="py-4">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  T-shirt with Tape Details
+                </h5>
+              </a>
+              <div class="mb-2.5 mt-2 flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star-half text-yellow-300"></i>
+                </div>
+                <p class="ml-2 text-sm font-thin">
+                  4.5<span class="text-slate-400">/5</span>
+                </p>
+              </div>
+              <div class="flex items-center justify-between">
+                <span
+                  class="text-2xl font-semibold text-gray-900 dark:text-white"
+                  >$120</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-lg">
+            <div
+              class="flex aspect-square w-[20vw] items-center justify-center overflow-hidden rounded-2xl bg-[#F0EEED] px-6"
+            >
+              <a href="#">
+                <img
+                  class="object-cover object-center"
+                  src="/assets/images/products/tshirt-with-tape-details.png"
+                  alt="tshirt-with-tape-details.png"
+                />
+              </a>
+            </div>
+            <div class="py-4">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  T-shirt with Tape Details
+                </h5>
+              </a>
+              <div class="mb-2.5 mt-2 flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star-half text-yellow-300"></i>
+                </div>
+                <p class="ml-2 text-sm font-thin">
+                  4.5<span class="text-slate-400">/5</span>
+                </p>
+              </div>
+              <div class="flex items-center justify-between">
+                <span
+                  class="text-2xl font-semibold text-gray-900 dark:text-white"
+                  >$120</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-lg">
+            <div
+              class="flex aspect-square w-[20vw] items-center justify-center overflow-hidden rounded-2xl bg-[#F0EEED] px-6"
+            >
+              <a href="#">
+                <img
+                  class="object-cover object-center"
+                  src="/assets/images/products/tshirt-with-tape-details.png"
+                  alt="tshirt-with-tape-details.png"
+                />
+              </a>
+            </div>
+            <div class="py-4">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  T-shirt with Tape Details
+                </h5>
+              </a>
+              <div class="mb-2.5 mt-2 flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star-half text-yellow-300"></i>
+                </div>
+                <p class="ml-2 text-sm font-thin">
+                  4.5<span class="text-slate-400">/5</span>
+                </p>
+              </div>
+              <div class="flex items-center justify-between">
+                <span
+                  class="text-2xl font-semibold text-gray-900 dark:text-white"
+                  >$120</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-lg">
+            <div
+              class="flex aspect-square w-[20vw] items-center justify-center overflow-hidden rounded-2xl bg-[#F0EEED] px-6"
+            >
+              <a href="#">
+                <img
+                  class="object-cover object-center"
+                  src="/assets/images/products/tshirt-with-tape-details.png"
+                  alt="tshirt-with-tape-details.png"
+                />
+              </a>
+            </div>
+            <div class="py-4">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  T-shirt with Tape Details
+                </h5>
+              </a>
+              <div class="mb-2.5 mt-2 flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star-half text-yellow-300"></i>
+                </div>
+                <p class="ml-2 text-sm font-thin">
+                  4.5<span class="text-slate-400">/5</span>
+                </p>
+              </div>
+              <div class="flex items-center justify-between">
+                <span
+                  class="text-2xl font-semibold text-gray-900 dark:text-white"
+                  >$120</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-lg">
+            <div
+              class="flex aspect-square w-[20vw] items-center justify-center overflow-hidden rounded-2xl bg-[#F0EEED] px-6"
+            >
+              <a href="#">
+                <img
+                  class="object-cover object-center"
+                  src="/assets/images/products/tshirt-with-tape-details.png"
+                  alt="tshirt-with-tape-details.png"
+                />
+              </a>
+            </div>
+            <div class="py-4">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  T-shirt with Tape Details
+                </h5>
+              </a>
+              <div class="mb-2.5 mt-2 flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star-half text-yellow-300"></i>
+                </div>
+                <p class="ml-2 text-sm font-thin">
+                  4.5<span class="text-slate-400">/5</span>
+                </p>
+              </div>
+              <div class="flex items-center justify-between">
+                <span
+                  class="text-2xl font-semibold text-gray-900 dark:text-white"
+                  >$120</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-lg">
+            <div
+              class="flex aspect-square w-[20vw] items-center justify-center overflow-hidden rounded-2xl bg-[#F0EEED] px-6"
+            >
+              <a href="#">
+                <img
+                  class="object-cover object-center"
+                  src="/assets/images/products/tshirt-with-tape-details.png"
+                  alt="tshirt-with-tape-details.png"
+                />
+              </a>
+            </div>
+            <div class="py-4">
+              <a href="#">
+                <h5
+                  class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                >
+                  T-shirt with Tape Details
+                </h5>
+              </a>
+              <div class="mb-2.5 mt-2 flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star text-yellow-300"></i
+                  ><i class="fa-solid fa-star-half text-yellow-300"></i>
+                </div>
+                <p class="ml-2 text-sm font-thin">
+                  4.5<span class="text-slate-400">/5</span>
+                </p>
+              </div>
+              <div class="flex items-center justify-between">
+                <span
+                  class="text-2xl font-semibold text-gray-900 dark:text-white"
+                  >$120</span
+                >
+              </div>
+            </div>
+          </div>
+        </figure>
+        <hr class="border border-slate-200" />
+      </section>
+    </section>
+
+    <footer class="mt-20 bg-white dark:bg-gray-900">
+      <div class="relative h-40">
+        <div class="lg:px-30 absolute h-full w-full px-5 md:px-10">
+          <div
+            class="flex w-full items-center justify-between rounded-2xl bg-black px-12 py-8"
+          >
+            <h3 class="basis-1/2 text-4xl font-bold uppercase text-white">
+              stay upto date about our latest offer
+            </h3>
+            <article class="flex flex-col gap-3">
+              <div class="flex h-10 items-center rounded-full bg-white px-3">
+                <i class="fa-regular fa-envelope"></i>
+                <input
+                  type="text"
+                  class="w-full bg-white placeholder:px-3"
+                  placeholder=" Enter your email address"
+                />
+              </div>
+              <button
+                class="w-80 rounded-full bg-white py-2 text-center font-semibold text-black"
+              >
+                Subscribe to Newsletter
+              </button>
+            </article>
+          </div>
+        </div>
+        <div class="h-[50%]"></div>
+        <div class="h-[50%] bg-[#F0F0F0]"></div>
+      </div>
+      <div
+        class="lg:px-30 mx-auto w-full bg-[#F0F0F0] px-5 py-10 md:px-10 lg:py-14"
+      >
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 basis-[20%] md:mb-0">
+            <h4 class="mb-6 text-3xl font-extrabold">SHOP CO</h4>
+            <p class="text-sm font-thin">
+              We have clothes that suits your style and which you’re proud to
+              wear. From women to men.
+            </p>
+            <figure class="mt-8 flex gap-4">
+              <div
+                class="inline-flex aspect-square w-8 items-center justify-center rounded-full border border-gray-400 bg-white"
+              >
+                <i class="fa-brands fa-twitter text-md text-black"></i>
+              </div>
+              <div
+                class="inline-flex aspect-square w-8 items-center justify-center rounded-full border border-gray-400 bg-black"
+              >
+                <i class="fa-brands fa-facebook-f text-md text-white"></i>
+              </div>
+              <div
+                class="inline-flex aspect-square w-8 items-center justify-center rounded-full border border-gray-400 bg-white"
+              >
+                <i class="fa-brands fa-instagram text-md text-black"></i>
+              </div>
+              <div
+                class="inline-flex aspect-square w-8 items-center justify-center rounded-full border border-gray-400 bg-white"
+              >
+                <i class="fa-brands fa-github text-md text-black"></i>
+              </div>
+            </figure>
+          </div>
+          <div>
+            <h2
+              class="text-md mb-4 font-semibold uppercase text-gray-900 dark:text-white"
+            >
+              Company
+            </h2>
+            <ul
+              class="flex flex-col gap-3 font-thin text-gray-500 dark:text-gray-400"
+            >
+              <li>
+                <a href="#" class="capitalize hover:underline">about</a>
+              </li>
+              <li>
+                <a href="#" class="capitalize hover:underline">features</a>
+              </li>
+              <li>
+                <a href="#" class="capitalize hover:underline">works</a>
+              </li>
+              <li>
+                <a href="#" class="capitalize hover:underline">career</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="text-md mb-4 font-semibold uppercase text-gray-900 dark:text-white"
+            >
+              Help
+            </h2>
+            <ul
+              class="flex flex-col gap-3 font-thin text-gray-500 dark:text-gray-400"
+            >
+              <li>
+                <a href="#" class="capitalize hover:underline"
+                  >customer support</a
+                >
+              </li>
+              <li>
+                <a href="#" class="capitalize hover:underline"
+                  >delivery details</a
+                >
+              </li>
+              <li>
+                <a href="#" class="capitalize hover:underline"
+                  >terms & conditions</a
+                >
+              </li>
+              <li>
+                <a href="#" class="capitalize hover:underline"
+                  >privary policy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="text-md mb-4 font-semibold uppercase text-gray-900 dark:text-white"
+            >
+              Faq
+            </h2>
+            <ul
+              class="flex flex-col gap-3 font-thin text-gray-500 dark:text-gray-400"
+            >
+              <li>
+                <a href="#" class="capitalize hover:underline">account</a>
+              </li>
+              <li>
+                <a href="#" class="capitalize hover:underline"
+                  >manage deliveries</a
+                >
+              </li>
+              <li>
+                <a href="#" class="capitalize hover:underline">orders</a>
+              </li>
+              <li>
+                <a href="#" class="capitalize hover:underline">payments</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="text-md mb-4 font-semibold uppercase text-gray-900 dark:text-white"
+            >
+              resources
+            </h2>
+            <ul
+              class="flex flex-col gap-3 font-thin text-gray-500 dark:text-gray-400"
+            >
+              <li>
+                <a href="#" class="capitalize hover:underline">free ebooks</a>
+              </li>
+              <li>
+                <a href="#" class="capitalize hover:underline"
+                  >development tutorial</a
+                >
+              </li>
+              <li>
+                <a href="#" class="capitalize hover:underline">how to - blog</a>
+              </li>
+              <li>
+                <a href="#" class="capitalize hover:underline"
+                  >youtube playlist</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr
+          class="my-5 border-gray-400 sm:mx-auto lg:my-8 dark:border-gray-700"
+        />
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+            >Shop.co &copy; 2000-2023, All Rights Reserved
+          </span>
+          <div class="flex gap-3 sm:mt-0 sm:justify-center">
+            <a
+              href="#"
+              class="flex h-7 w-11 items-center justify-center rounded-sm bg-white"
+            >
+              <img src="assets/icons/visa-icon.svg" class="h-3" alt="" />
+            </a>
+            <a
+              href="#"
+              class="flex h-7 w-11 items-center justify-center rounded-sm bg-white"
+            >
+              <img src="assets/icons/mastercard-icon.svg" class="h-4" alt="" />
+            </a>
+            <a
+              href="#"
+              class="flex h-7 w-11 items-center justify-center rounded-sm bg-white"
+            >
+              <img src="assets/icons/paypal-icon.png" class="h-2.5" alt="" />
+            </a>
+            <a
+              href="#"
+              class="flex h-7 w-11 items-center justify-center rounded-sm bg-white"
+            >
+              <img src="assets/icons/applepay-icon.svg" class="h-3" alt="" />
+            </a>
+            <a
+              href="#"
+              class="flex h-7 w-11 items-center justify-center rounded-sm bg-white"
+            >
+              <img src="assets/icons/google-pay-icon.svg" class="h-3" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
