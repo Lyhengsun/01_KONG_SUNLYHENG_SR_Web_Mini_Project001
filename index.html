@@ -11,7 +11,6 @@
       referrerpolicy="no-referrer"
     />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    </style>
     <title>Home</title>
   </head>
   <body class="max-w-[100vw] overflow-x-hidden">
@@ -78,12 +77,14 @@
       <li>Brands</li>
     </ul>
 
-    <section class="px-30 flex bg-[#F2F0F1]">
+    <section class="lg:px-30 flex bg-[#F2F0F1] px-5 md:px-10">
       <article class="basis-full flex-col py-20">
-        <h1 class="mb-5 text-7xl font-extrabold uppercase">
+        <h1
+          class="mb-5 text-2xl font-extrabold uppercase md:text-3xl lg:text-7xl"
+        >
           find clothes that matches your style
         </h1>
-        <p class="w-[90%] font-thin">
+        <p class="w-[90%] text-sm font-thin lg:text-base">
           Browse through our diverse range of meticulously crafted garments,
           designed to bring out your individuality and cater to your sense of
           style.
@@ -91,23 +92,29 @@
         <button class="my-8 rounded-full bg-black px-16 py-3 text-white">
           Shop now
         </button>
-        <ul class="flex justify-center">
-          <li class="border-r-2 border-r-slate-300 pr-10">
-            <p class="mb-1 text-5xl font-semibold">200+</p>
-            <p class="font-thin">International Brands</p>
+        <ul class="flex flex-wrap justify-start gap-y-5">
+          <li class="mr-5 border-r-2 border-r-slate-300 pr-5 lg:mr-10 lg:pr-10">
+            <p class="mb-1 text-xl font-semibold md:text-2xl lg:text-5xl">
+              200+
+            </p>
+            <p class="text-sm font-thin lg:text-base">International Brands</p>
           </li>
-          <li class="border-r-2 border-r-slate-300 px-10">
-            <p class="mb-1 text-5xl font-semibold">2,000+</p>
-            <p class="font-thin">High-Quality Products</p>
+          <li class="mr-5 border-r-2 border-r-slate-300 pr-5 lg:mr-10 lg:pr-10">
+            <p class="mb-1 text-xl font-semibold md:text-2xl lg:text-5xl">
+              2,000+
+            </p>
+            <p class="text-sm font-thin lg:text-base">High-Quality Products</p>
           </li>
-          <li class="pl-10">
-            <p class="mb-1 text-5xl font-semibold">30,000+</p>
-            <p class="font-thin">Happy Customers</p>
+          <li class="">
+            <p class="mb-1 text-xl font-semibold md:text-2xl lg:text-5xl">
+              30,000+
+            </p>
+            <p class="text-sm font-thin lg:text-base">Happy Customers</p>
           </li>
         </ul>
       </article>
       <figure
-        class="relative basis-full bg-[url(./assets/images/trendy-couple-posing.jpg)] bg-cover bg-[center_10%]"
+        class="relative hidden basis-full bg-[url(./assets/images/trendy-couple-posing.jpg)] bg-cover bg-[center_10%] md:block"
       >
         <img
           class="absolute right-0 top-[10%] aspect-square w-20"
@@ -121,8 +128,10 @@
         />
       </figure>
     </section>
-    <section class="px-30 bg-black py-8">
-      <figure class="flex justify-between">
+    <section
+      class="lg:px-30 max-w-[1920px] overflow-x-auto bg-black px-5 py-8 md:px-10"
+    >
+      <figure class="flex justify-between gap-5">
         <img src="assets/logo/versace-logo.svg" alt="versace-logo.svg" /><img
           src="assets/logo/zara-logo.svg"
           alt="zara-logo.svg"
@@ -221,7 +230,7 @@
               >
               <span
                 class="rounded-full bg-red-100 px-3 py-1.5 text-xs font-light text-red-800 dark:bg-red-200 dark:text-blue-800"
-                >20%</span
+                >-20%</span
               >
             </div>
           </div>
@@ -307,7 +316,7 @@
               >
               <span
                 class="rounded-full bg-red-100 px-3 py-1.5 text-xs font-light text-red-800 dark:bg-red-200 dark:text-blue-800"
-                >30%</span
+                >-30%</span
               >
             </div>
           </div>
@@ -370,7 +379,7 @@
               >
               <span
                 class="rounded-full bg-red-100 px-3 py-1.5 text-xs font-light text-red-800 dark:bg-red-200 dark:text-blue-800"
-                >20%</span
+                >-20%</span
               >
             </div>
           </div>
@@ -531,7 +540,7 @@
         </div>
       </figure>
     </section>
-    <section class="lg:px-30 px-5 md:px-10">
+    <section class="lg:px-30 w-[100vw] overflow-x-hidden px-5 md:px-10">
       <article class="mb-14 flex justify-between">
         <h2 class="text-5xl font-extrabold uppercase">our happy customers</h2>
         <div>
@@ -865,5 +874,20 @@
         </div>
       </div>
     </footer>
+
+    <div
+      class="fixed bottom-3 left-1/2 flex -translate-x-1/2 gap-2 overflow-hidden rounded-full bg-white shadow-sm shadow-slate-500"
+    >
+      <a class="aspect-square w-10 bg-white text-center leading-10">
+        <i class="fa-solid fa-arrow-left text-slate-400"></i>
+      </a>
+      <p class="py-2">Home</p>
+      <a
+        href="./category-page.html"
+        class="aspect-square w-10 bg-white text-center leading-10 hover:bg-slate-200 active:bg-slate-300"
+      >
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
   </body>
 </html>
