@@ -1,5 +1,32 @@
-.header1 {
-  @apply bg-red-500 text-3xl;
+@font-face {
+  font-family: "IntegralCFBold";
+  src: url("./assets/fonts/Fontspring-DEMO-integralcf-bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("assets/fonts/Satoshi/Satoshi-Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("assets/fonts/Satoshi/Satoshi-Medium.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("assets/fonts/Satoshi/Satoshi-Light.otf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("assets/fonts/Satoshi/Satoshi-Regular.otf");
+  font-weight: normal;
 }
 
-។
+.font-integralCF-bold {
+  font-family: "IntegralCFBold", sans-serif;
+}
+.font-satoshi {
+  font-family: "Satoshi", sans-serif;
+}
