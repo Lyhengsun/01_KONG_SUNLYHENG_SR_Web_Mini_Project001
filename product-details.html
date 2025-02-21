@@ -11,18 +11,52 @@
       referrerpolicy="no-referrer"
     />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+      @font-face {
+        font-family: "IntegralCFBold";
+        src: url("./assets/fonts/Fontspring-DEMO-integralcf-bold.otf");
+        font-weight: bold;
+      }
+      @font-face {
+        font-family: "Satoshi";
+        src: url("assets/fonts/Satoshi/Satoshi-Bold.otf");
+        font-weight: bold;
+      }
+      @font-face {
+        font-family: "Satoshi";
+        src: url("assets/fonts/Satoshi/Satoshi-Medium.otf");
+        font-weight: 500;
+      }
+      @font-face {
+        font-family: "Satoshi";
+        src: url("assets/fonts/Satoshi/Satoshi-Light.otf");
+        font-weight: 300;
+      }
+      @font-face {
+        font-family: "Satoshi";
+        src: url("assets/fonts/Satoshi/Satoshi-Regular.otf");
+        font-weight: normal;
+      }
+
+      .font-integralCF-bold {
+        font-family: "IntegralCFBold", sans-serif;
+      }
+      .font-satoshi {
+        font-family: "Satoshi", sans-serif;
+      }
+    </style>
     <title>Product Details</title>
   </head>
-  <body>
+  <body class="font-satoshi">
     <header
       class="gap-1 bg-black py-2.5 text-xs font-thin text-white md:text-sm"
     >
       <div
         class="lg:mx-30 relative mx-5 flex items-center justify-center md:mx-10"
       >
-        <p>
+        <p class="text-sm">
           Sign up and get 20% off to your first order.
-          <a href="" class="border-b-[1px] border-b-white font-semibold"
+          <a href="" class="border-b-[1px] border-b-white font-medium"
             >Sign Up Now</a
           >
         </p>
@@ -33,7 +67,7 @@
     <section class="lg:px-30 px-5 md:px-10">
       <article class="flex items-center justify-between py-5">
         <article>
-          <h2 class="text-lg font-extrabold sm:text-4xl">SHOP.CO</h2>
+          <h2 class="font-integralCF-bold text-sm sm:text-3xl">SHOP.CO</h2>
         </article>
         <article>
           <ul
@@ -77,10 +111,8 @@
       <hr class="border-gray-300 sm:mx-auto dark:border-gray-700" />
       <article class="flex gap-4 pt-5">
         <a href="" class="text-slate-500"
-          >Home <i class="fa-solid fa-angle-right"></i></a
-        ><a href="" class="text-slate-500"
-          >Shop <i class="fa-solid fa-angle-right"></i></a
-        ><a href="" class="text-slate-500"
+          >Home <i class="fa-solid fa-angle-right"></i><a href="" class="text-slate-500"
+          >Shop <i class="fa-solid fa-angle-right"></i><a href="" class="text-slate-500"
           >Men <i class="fa-solid fa-angle-right"></i></a
         ><a href="">T-shirts</a>
       </article>
@@ -115,7 +147,7 @@
       </section>
 
       <section class="flex basis-1/2 flex-col justify-between">
-        <h2 class="text-4xl font-extrabold uppercase">
+        <h2 class="font-integralCF-bold text-4xl uppercase">
           one life graphic t-shirt
         </h2>
         <div class="mb-2.5 mt-2 flex items-center">
@@ -387,7 +419,7 @@
     </section>
 
     <section class="lg:px-30 mb-10 mt-16 px-5 md:px-10">
-      <h2 class="mb-16 text-center text-5xl font-extrabold uppercase">
+      <h2 class="font-integralCF-bold mb-16 text-center text-5xl uppercase">
         you might also like
       </h2>
       <figure class="mb-4 flex justify-between">
@@ -570,7 +602,9 @@
           <div
             class="flex w-full items-center justify-between rounded-2xl bg-black px-12 py-8"
           >
-            <h3 class="basis-1/2 text-4xl font-bold uppercase text-white">
+            <h3
+              class="font-integralCF-bold basis-1/2 text-4xl uppercase text-white"
+            >
               stay upto date about our latest offer
             </h3>
             <article class="flex flex-col gap-3">
@@ -598,7 +632,7 @@
       >
         <div class="md:flex md:justify-between">
           <div class="mb-6 basis-[20%] md:mb-0">
-            <h4 class="mb-6 text-3xl font-extrabold">SHOP CO</h4>
+            <h4 class="font-integralCF-bold mb-6 text-3xl">SHOP CO</h4>
             <p class="text-sm font-thin">
               We have clothes that suits your style and which you’re proud to
               wear. From women to men.
@@ -780,14 +814,14 @@
       class="fixed bottom-3 left-1/2 flex -translate-x-1/2 gap-2 overflow-hidden rounded-full bg-white shadow-sm shadow-slate-500"
     >
       <a
-        href="./category-page.html"
+        href="./index.html"
         class="aspect-square w-10 bg-white text-center leading-10 hover:bg-slate-200 active:bg-slate-300"
       >
         <i class="fa-solid fa-arrow-left"></i>
       </a>
       <p class="py-2">Product Details</p>
       <a
-        href="./cart.html"
+        href="./category-page.html"
         class="aspect-square w-10 bg-white text-center leading-10 hover:bg-slate-200 active:bg-slate-300"
       >
         <i class="fa-solid fa-arrow-right"></i>
